@@ -1,0 +1,23 @@
+.landing {
+
+  &__title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #444343;
+    text-align: center;
+  }
+
+  &__description {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+  }
+}

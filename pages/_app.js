@@ -4,12 +4,10 @@ import "../styles/main.scss";
 import favicon from '../public/favicon.ico';
 import appleTouchFavicon from '../public/apple-touch-icon.png';
 import manifest from '../public/site.webmanifest';
-import ReactGA from 'react-ga';
+import * as ReactGA from '../utils/react-ga';
 
 const MyApp = ({Component, pageProps}) => {
-    ReactGA.initialize(process.env.GOOGLE_ANALYTICS_TRACKING_ID, {
-        debug: process.env.NODE_ENV !== 'production'
-    });
+    ReactGA.init();
     return <>
         <Head>
             <link rel="shortcut icon" href={favicon} />

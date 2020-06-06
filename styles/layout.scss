@@ -1,21 +1,49 @@
 main {
-  padding: 5rem 0;
+  //flex: 1;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  //flex-direction: column;
+}
+
+section {
   flex: 1;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
+
+  &.dark {
+    background-color: #f7f7f7;
+  }
 }
 
-.title {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  color: #444343;
+.arrow-down {
+
+  &__icon {
+    height: 30px;
+    width: 45px;
+    cursor: pointer;
+  }
 }
 
-.title,
-.description {
-  text-align: center;
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 html,

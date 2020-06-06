@@ -1,13 +1,13 @@
-const IconLink = ({ href, imgAlt, icon, onClickCallback }) => {
+const IconLink = ({ href, imgAlt, icon, onClick, className, download = false, target = '_blank' }) => {
     return <a
         href={href}
-        target="_blank"
+        target={target}
         rel="noopener"
-        download
-        onClick={onClickCallback}
+        download={download}
+        onClick={onClick}
     >
         <img src={icon}
-             className={'socials__icon'}
+             className={className ? className : 'socials__icon'}
              alt={imgAlt}
         />
     </a>
