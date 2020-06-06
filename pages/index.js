@@ -40,8 +40,6 @@ export default function Index() {
                         Hi, I'm Gary! 👋🏼
                     </h1>
                     <p className="description">
-                        <br/><br/>
-
                         I'm a Software Developer at Konrad Group.
 
                         I'm passionate about mobile and front-end development, design, and user experiences.<br/><br/>
