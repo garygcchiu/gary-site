@@ -23,6 +23,7 @@ const MyApp = ({Component, pageProps}) => {
             <meta name="author" content="Gary Chiu" />
             <meta name="keywords" content="Gary, Chiu, Gary Chiu, portfolio, website" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="theme-color" content="#FFFFFF" />
         </Head>
         <Component {...pageProps} />
     </>
