@@ -1,11 +1,10 @@
 import { useRef, useEffect } from 'react';
 import Typed from 'typed.js';
 import resume from '../public/Gary_Chiu_Resume_a.pdf';
-//import headshotNoBG from '../public/headshot_2020_no-bg.png';
-//import headshot from '../public/Headshot_2020.jpg';
 import githubIcon from '../public/icons/github.svg';
 import fileIcon from '../public/icons/file.svg';
 import linkedinIcon from '../public/icons/linkedin.svg';
+import arrowDownIcon from '../public/icons/angle-down.svg';
 import Header from '../components/Header';
 import IconLink from '../components/IconLink';
 import * as ReactGA from '../utils/react-ga';
@@ -18,8 +17,18 @@ const handleSocialLinkClicked = website => {
     ReactGA.sendEvent('Link', `Clicked ${website} Profile`);
 };
 
+const scrollToSection = ref => {
+    const el = ref.current ? ref.current : ref;
+    el.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+    ReactGA.sendEvent('Interaction', `Clicked Scroll Down`);
+};
+
 export default function Index() {
     ReactGA.pageView('/');
+    const aboutRef = useRef(null);
     const descRef = useRef(null);
 
     useEffect(() => {
@@ -68,8 +77,22 @@ export default function Index() {
                         />
                     </div>
                 </div>
+                <div style={{ position: 'absolute', bottom: '30px'  }}>
+                    <IconLink
+                        href={undefined}
+                        imgAlt={'Scroll to About Me'}
+                        icon={arrowDownIcon}
+                        onClick={() => scrollToSection(aboutRef)}
+                        className={'arrow-down__icon bounce'}
+                        target={'_self'}
+                    />
+                </div>
             </section>
-
+            <section className={'dark'} ref={aboutRef}>
+                <div>
+                    Coming soon
+                </div>
+            </section>
         </main>
     </>)
 }
