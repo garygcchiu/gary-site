@@ -37,16 +37,12 @@ export default function Index() {
                 </div>
                 <div>
                     <h1 className="title">
-                        Hi, I'm Gary! 👋🏼
+                        Gary Chiu
                     </h1>
                     <p className="description">
-                        I'm a Software Developer at Konrad Group.
-
-                        I'm passionate about mobile and front-end development, design, and user experiences.<br/><br/>
-
-                        Previously, I've completed internships/co-ops at Manulife Financial, Mapsted, and Big Blue Bubble.<br/><br/>
+                        hehe xd
                     </p>
-                    <div>
+                    <div className={'d-flex justify-content-center'}>
                         <IconLink
                             href={resume}
                             imgAlt={'Resume Download'}
