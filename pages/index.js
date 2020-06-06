@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import Typed from 'typed.js';
+import Particles from 'react-particles-js';
 import resume from '../public/Gary_Chiu_Resume_a.pdf';
 //import headshotNoBG from '../public/headshot_2020_no-bg.png';
 //import headshot from '../public/Headshot_2020.jpg';
@@ -9,6 +10,33 @@ import linkedinIcon from '../public/icons/linkedin.svg';
 import Header from '../components/Header';
 import IconLink from '../components/IconLink';
 import * as ReactGA from '../utils/react-ga';
+
+const particlesParams = {
+    particles: {
+        number: {
+            value: 20
+        },
+        size: {
+            value: 1
+        },
+        color: {
+            value: '#000000'
+        },
+        line_linked: {
+            enable: true,
+            opacity: 0.2,
+            color: '#000000'
+        },
+    },
+    interactivity: {
+        events: {
+            onhover: {
+                enable: true,
+                mode: "repulse"
+            }
+        }
+    }
+};
 
 const handleResumeDownloaded = () => {
     ReactGA.sendEvent('Link', 'Downloaded Resume');
@@ -35,6 +63,10 @@ export default function Index() {
 
     return (<>
         <Header />
+        <Particles
+            className={'landing__particles'}
+            params={particlesParams}
+        />
         <main>
             <section>
                 <div>

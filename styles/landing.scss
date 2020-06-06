@@ -20,4 +20,10 @@
     display: flex;
     justify-content: center;
   }
+
+  &__particles {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 }
