@@ -6,7 +6,18 @@ module.exports = withImages({
     webpack(config, options) {
         config.module.rules.push({
             test: /\.(webmanifest)$/i,
-            loader: ["file-loader", "app-manifest-loader"]
+            use: [
+                {
+                    loader: "file-loader",
+                    options: {
+                        name: '[name].[ext]',
+                        publicPath: '/',
+                    },
+                },
+                {
+                    loader: "app-manifest-loader"
+                }
+            ]
         }, {
             test: /\.(pdf)$/i,
             loader: 'file-loader',
