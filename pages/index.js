@@ -100,7 +100,7 @@ export default function Index() {
             />
             <FadeInSection className={'dark'} fadeChildrenOnly={true}>
                 <div ref={aboutRef}>
-                    Coming soon
+                    Hi! 👋🏼
                 </div>
             </FadeInSection>
         </main>
