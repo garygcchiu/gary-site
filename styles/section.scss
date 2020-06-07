@@ -6,10 +6,16 @@
   height: 100%;
   width: 100%;
   background-size: cover;
-  background-image: url('../public/Toronto.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
+
+  @media (prefers-color-scheme: dark){
+    background-image: url('../public/Toronto-Night.jpg');
+  }
+  @media (prefers-color-scheme: light){
+    background-image: url('../public/Toronto-Day.jpg');
+  }
 }
 
 .fade-in-section {
@@ -34,13 +40,23 @@ section, .section {
   align-items: center;
   flex-direction: column;
 
-  &.dark {
-    background-color: #f7f7f7;
+  &.alt {
+    @media (prefers-color-scheme: dark){
+      background-color: #070707;
+    }
+    @media (prefers-color-scheme: light){
+      background-color: #f7f7f7;
+    }
   }
 }
 
 section {
-  background-color: #ffffff;
+  @media (prefers-color-scheme: dark){
+    background-color: #070707;
+  }
+  @media (prefers-color-scheme: light){
+    background-color: #ffffff;
+  }
 }
 
 .image-section {

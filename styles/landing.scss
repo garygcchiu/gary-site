@@ -3,8 +3,14 @@
   &__title {
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: #444343;
     text-align: center;
+
+    @media (prefers-color-scheme: dark){
+      color: #c0c0c0;
+    }
+    @media (prefers-color-scheme: light){
+      color: #444343;
+    }
   }
 
   &__description {
@@ -14,11 +20,16 @@
     align-items: center;
     margin-bottom: 1.5rem;
     text-align: center;
+
+    @media (prefers-color-scheme: dark){
+      color: #c0c0c0;
+    }
   }
 
   &__socials {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   &__arrow-down {
