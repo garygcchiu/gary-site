@@ -1,0 +1,53 @@
+#background_wrap {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-image: url('../public/Toronto.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+}
+
+.fade-in-section {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.75s ease-in-out, 0.75s ease-in-out;
+  will-change: opacity, visibility;
+
+  &--visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    display: flex;
+  }
+}
+
+section, .section {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &.dark {
+    background-color: #f7f7f7;
+  }
+}
+
+section {
+  background-color: #ffffff;
+}
+
+.image-section {
+  background: none;
+  height: 20vh;
+
+  &__overlay {
+
+  }
+}

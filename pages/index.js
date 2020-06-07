@@ -10,7 +10,6 @@ import IconLink from '../components/IconLink';
 import FadeInSection from '../components/FadeInSection';
 import ImageSection from '../components/ImageSection';
 import * as ReactGA from '../utils/react-ga';
-import torontoImage from "../public/Toronto.jpg";
 
 const handleResumeDownloaded = () => {
     ReactGA.sendEvent('Link', 'Downloaded Resume');
@@ -52,7 +51,8 @@ export default function Index() {
     return (<>
         <Header />
         <main>
-            <FadeInSection>
+            <div id="background_wrap" />
+            <FadeInSection fadeChildrenOnly={true}>
                 <div>
                     <h1 className="landing__title">
                         Gary Chiu
@@ -95,9 +95,7 @@ export default function Index() {
                     />
                 </div>
             </FadeInSection>
-            <ImageSection
-                image={torontoImage}
-            />
+            <ImageSection />
             <FadeInSection className={'dark'} fadeChildrenOnly={true}>
                 <div ref={aboutRef}>
                     Hi! 👋🏼

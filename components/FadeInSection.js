@@ -7,12 +7,12 @@ const FadeInSection = ({ children, className = '', fadeChildrenOnly = false }) =
     });
 
     if (!fadeChildrenOnly){
-        return <section ref={ref} className={`fade-in-section ${inView ? 'is-visible' : '' } ${className}`}>
+        return <section ref={ref} className={`fade-in-section ${inView ? 'fade-in-section--visible' : '' } ${className}`}>
             { children }
         </section>;
     } else {
         return <section className={className}>
-            <div ref={ref} className={`section fade-in-section ${inView ? 'is-visible' : '' }`}>
+            <div ref={ref} className={`section fade-in-section ${inView ? 'fade-in-section--visible' : '' }`}>
                 { children }
             </div>
         </section>;

@@ -1,9 +1,8 @@
-const ImageSection = (image) => {
+const ImageSection = () => {
     return <section
-        className={'section__image'}
-        style={{backgroundImage: `url(${image.image})`, height: '20vh'}}
+        className={'image-section'}
     >
-        <div className={'section__image__overlay'}/>
+        <div className={'image-section__overlay'}/>
     </section>
 };
 
