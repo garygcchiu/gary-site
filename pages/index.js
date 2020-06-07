@@ -1,14 +1,16 @@
 import { useRef, useEffect } from 'react';
 import Typed from 'typed.js';
 import resume from '../public/Gary_Chiu_Resume_a.pdf';
-//import headshotNoBG from '../public/headshot_2020_no-bg.png';
-//import headshot from '../public/Headshot_2020.jpg';
 import githubIcon from '../public/icons/github.svg';
 import fileIcon from '../public/icons/file.svg';
 import linkedinIcon from '../public/icons/linkedin.svg';
+import arrowDownIcon from '../public/icons/angle-down.svg';
 import Header from '../components/Header';
 import IconLink from '../components/IconLink';
+import FadeInSection from '../components/FadeInSection';
+import ImageSection from '../components/ImageSection';
 import * as ReactGA from '../utils/react-ga';
+import torontoImage from "../public/Toronto.jpg";
 
 const handleResumeDownloaded = () => {
     ReactGA.sendEvent('Link', 'Downloaded Resume');
@@ -18,8 +20,18 @@ const handleSocialLinkClicked = website => {
     ReactGA.sendEvent('Link', `Clicked ${website} Profile`);
 };
 
+const scrollToSection = ref => {
+    const el = ref.current ? ref.current : ref;
+    el.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+    ReactGA.sendEvent('Interaction', `Clicked Scroll Down`);
+};
+
 export default function Index() {
     ReactGA.pageView('/');
+    const aboutRef = useRef(null);
     const descRef = useRef(null);
 
     useEffect(() => {
@@ -30,13 +42,17 @@ export default function Index() {
             loop: true,
             backDelay: 2500
         });
-        typed.start();
+
+        // destroy Typed instance on unmounting the component
+        return () => {
+            typed.destroy();
+        };
     }, []);
 
     return (<>
         <Header />
         <main>
-            <section>
+            <FadeInSection>
                 <div>
                     <h1 className="landing__title">
                         Gary Chiu
@@ -68,8 +84,25 @@ export default function Index() {
                         />
                     </div>
                 </div>
-            </section>
-
+                <div className={'landing__arrow-down'}>
+                    <IconLink
+                        href={undefined}
+                        imgAlt={'Scroll to About Me'}
+                        icon={arrowDownIcon}
+                        onClick={() => scrollToSection(aboutRef)}
+                        className={'landing__arrow-down__icon bounce'}
+                        target={'_self'}
+                    />
+                </div>
+            </FadeInSection>
+            <ImageSection
+                image={torontoImage}
+            />
+            <FadeInSection className={'dark'} fadeChildrenOnly={true}>
+                <div ref={aboutRef}>
+                    Hi! 👋🏼
+                </div>
+            </FadeInSection>
         </main>
     </>)
 }

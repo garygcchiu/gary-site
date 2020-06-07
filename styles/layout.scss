@@ -6,7 +6,7 @@ main {
   //flex-direction: column;
 }
 
-section {
+section, .section {
   flex: 1;
   height: 100vh;
   display: flex;
@@ -17,32 +17,18 @@ section {
   &.dark {
     background-color: #f7f7f7;
   }
-}
 
-.arrow-down {
+  &__image {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 
-  &__icon {
-    height: 30px;
-    width: 45px;
-    cursor: pointer;
-  }
-}
-
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
+    &__overlay {
+      z-index: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
   }
 }
 
@@ -55,4 +41,18 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+.fade-in-section {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.75s ease-in-out, 0.75s ease-in-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  display: flex;
 }
