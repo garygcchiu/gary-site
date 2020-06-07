@@ -7,6 +7,7 @@ import linkedinIcon from '../public/icons/linkedin.svg';
 import arrowDownIcon from '../public/icons/angle-down.svg';
 import Header from '../components/Header';
 import IconLink from '../components/IconLink';
+import FadeInSection from '../components/FadeInSection';
 import * as ReactGA from '../utils/react-ga';
 
 const handleResumeDownloaded = () => {
@@ -39,13 +40,17 @@ export default function Index() {
             loop: true,
             backDelay: 2500
         });
-        typed.start();
+
+        // destroy Typed instance on unmounting the component
+        return () => {
+            typed.destroy();
+        };
     }, []);
 
     return (<>
         <Header />
         <main>
-            <section>
+            <FadeInSection>
                 <div>
                     <h1 className="landing__title">
                         Gary Chiu
@@ -77,22 +82,22 @@ export default function Index() {
                         />
                     </div>
                 </div>
-                <div style={{ position: 'absolute', bottom: '30px'  }}>
+                <div className={'landing__arrow-down'}>
                     <IconLink
                         href={undefined}
                         imgAlt={'Scroll to About Me'}
                         icon={arrowDownIcon}
                         onClick={() => scrollToSection(aboutRef)}
-                        className={'arrow-down__icon bounce'}
+                        className={'landing__arrow-down__icon bounce'}
                         target={'_self'}
                     />
                 </div>
-            </section>
-            <section className={'dark'} ref={aboutRef}>
-                <div>
+            </FadeInSection>
+            <FadeInSection className={'dark'} fadeChildrenOnly={true}>
+                <div ref={aboutRef}>
                     Coming soon
                 </div>
-            </section>
+            </FadeInSection>
         </main>
     </>)
 }
