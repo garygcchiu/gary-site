@@ -8,7 +8,9 @@ import arrowDownIcon from '../public/icons/angle-down.svg';
 import Header from '../components/Header';
 import IconLink from '../components/IconLink';
 import FadeInSection from '../components/FadeInSection';
+import ImageSection from '../components/ImageSection';
 import * as ReactGA from '../utils/react-ga';
+import torontoImage from "../public/Toronto.jpg";
 
 const handleResumeDownloaded = () => {
     ReactGA.sendEvent('Link', 'Downloaded Resume');
@@ -93,6 +95,9 @@ export default function Index() {
                     />
                 </div>
             </FadeInSection>
+            <ImageSection
+                image={torontoImage}
+            />
             <FadeInSection className={'dark'} fadeChildrenOnly={true}>
                 <div ref={aboutRef}>
                     Coming soon

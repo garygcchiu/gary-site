@@ -17,6 +17,19 @@ section, .section {
   &.dark {
     background-color: #f7f7f7;
   }
+
+  &__image {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+
+    &__overlay {
+      z-index: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+  }
 }
 
 html,
@@ -32,9 +45,8 @@ body {
 
 .fade-in-section {
   opacity: 0;
-  //transform: translateY(20vh);
   visibility: hidden;
-  transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+  transition: opacity 0.75s ease-in-out, 0.75s ease-in-out;
   will-change: opacity, visibility;
 }
 
