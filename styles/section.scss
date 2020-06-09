@@ -42,20 +42,20 @@ section, .section {
 
   &.alt {
     @media (prefers-color-scheme: dark){
-      background-color: #070707;
+      background-color: $section-bg-dark;
     }
     @media (prefers-color-scheme: light){
-      background-color: #f7f7f7;
+      background-color: $section-bg-alt-light;
     }
   }
 }
 
 section {
   @media (prefers-color-scheme: dark){
-    background-color: #070707;
+    background-color: $section-bg-dark;
   }
   @media (prefers-color-scheme: light){
-    background-color: #ffffff;
+    background-color: $section-bg-light;
   }
 }
 

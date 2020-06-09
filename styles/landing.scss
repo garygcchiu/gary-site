@@ -6,10 +6,10 @@
     text-align: center;
 
     @media (prefers-color-scheme: dark){
-      color: #c0c0c0;
+      color: $text-primary-dark;
     }
     @media (prefers-color-scheme: light){
-      color: #444343;
+      color: $text-primary-light;
     }
   }
 
@@ -22,7 +22,7 @@
     text-align: center;
 
     @media (prefers-color-scheme: dark){
-      color: #c0c0c0;
+      color: $text-primary-dark;
     }
   }
 

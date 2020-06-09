@@ -25,7 +25,8 @@
       }
       @media (prefers-color-scheme: light){
         background-image: url(../public/icons/github.svg);
-      }    }
+      }
+    }
 
     &--linkedin {
       @media (prefers-color-scheme: dark){
@@ -33,6 +34,7 @@
       }
       @media (prefers-color-scheme: light){
         background-image: url(../public/icons/linkedin.svg);
-      }    }
+      }
+    }
   }
 }
