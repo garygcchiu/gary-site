@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import Typed from 'typed.js';
-import resume from '../public/Gary_Chiu_Resume_a.pdf';
+import resume from '../public/Gary_Chiu_Resume_2020.pdf';
 import githubIcon from '../public/icons/github.svg';
 import fileIcon from '../public/icons/file.svg';
 import linkedinIcon from '../public/icons/linkedin.svg';
