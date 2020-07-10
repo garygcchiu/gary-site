@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Router from 'next/router';
 import Head from 'next/head';
 import "../styles/main.scss";
 import favicon from '../public/favicon.ico';
 import appleTouchFavicon from '../public/apple-touch-icon.png';
 import manifest from '../public/site.webmanifest';
 import * as ReactGA from '../utils/react-ga';
+import Loader from "../components/Loader";
 
 const MyApp = ({Component, pageProps}) => {
+    const [loaded, setLoaded] = useState(false);
+
+    // componentDidMount
+    useEffect(() => {
+        Router.events.on('routeChangeStart', () => {
+            setLoaded(false);
+        });
+
+        Router.events.on('routeChangeComplete', () => {
+            setLoaded(true);
+        });
+
+        Router.events.on('routeChangeError', () => {
+            setLoaded(true);
+        });
+
+        setLoaded(true);
+    }, []);
+
     ReactGA.init();
     return <>
         <Head>
@@ -23,7 +44,10 @@ const MyApp = ({Component, pageProps}) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta name="theme-color" content="#FFFFFF" />
         </Head>
-        <Component {...pageProps} />
+        {
+            loaded ? <Component {...pageProps} />
+                : <Loader />
+        }
     </>
 };
 

@@ -33,7 +33,9 @@ export default function Index() {
     const aboutRef = useRef(null);
     const descRef = useRef(null);
 
+    // componentDidMount
     useEffect(() => {
+        // init typed
         const typed = new Typed(descRef.current, {
             strings: ['Full Stack Web Developer', 'Software Engineer', 'Consultant'],
             typeSpeed: 50,
