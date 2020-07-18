@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Router from 'next/router';
 import Head from 'next/head';
 import "../styles/main.scss";
 import favicon from '../public/favicon.ico';
@@ -9,23 +8,13 @@ import * as ReactGA from '../utils/react-ga';
 import Loader from "../components/Loader";
 
 const MyApp = ({Component, pageProps}) => {
-    const [loaded, setLoaded] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     // componentDidMount
     useEffect(() => {
-        Router.events.on('routeChangeStart', () => {
-            setLoaded(false);
-        });
-
-        Router.events.on('routeChangeComplete', () => {
-            setLoaded(true);
-        });
-
-        Router.events.on('routeChangeError', () => {
-            setLoaded(true);
-        });
-
-        setLoaded(true);
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000);
     }, []);
 
     ReactGA.init();
@@ -45,8 +34,8 @@ const MyApp = ({Component, pageProps}) => {
             <meta name="theme-color" content="#FFFFFF" />
         </Head>
         {
-            loaded ? <Component {...pageProps} />
-                : <Loader />
+            loading ? <Loader />
+                : <Component {...pageProps} />
         }
     </>
 };
