@@ -64,7 +64,7 @@ export default function Index() {
                         <IconLink
                             href={resume}
                             imgAlt={'Resume Download'}
-                            icon={fileIcon}
+                            className={'socials__icon socials__icon--resume'}
                             download={true}
                             onClick={handleResumeDownloaded}
                         />
@@ -72,14 +72,14 @@ export default function Index() {
                         <IconLink
                             href={'https://www.github.com/garygcchiu'}
                             imgAlt={'GitHub Profile'}
-                            icon={githubIcon}
+                            className={'socials__icon socials__icon--github'}
                             onClick={() => handleSocialLinkClicked('Github')}
                         />
                         <span className={"socials__separator"}>|</span>
                         <IconLink
                             href={'https://www.linkedin.com/in/garygcchiu/'}
                             imgAlt={'LinkedIn Profile'}
-                            icon={linkedinIcon}
+                            className={'socials__icon socials__icon--linkedin'}
                             onClick={() => handleSocialLinkClicked('LinkedIn')}
                         />
                     </div>
@@ -96,7 +96,7 @@ export default function Index() {
                 </div>
             </FadeInSection>
             <ImageSection />
-            <FadeInSection className={'dark'} fadeChildrenOnly={true}>
+            <FadeInSection className={'dark alt'} fadeChildrenOnly={true}>
                 <div ref={aboutRef} className={'mb-3'}>
                     Hi! 👋🏼
                 </div>

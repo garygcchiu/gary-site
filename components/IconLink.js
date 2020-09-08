@@ -5,11 +5,16 @@ const IconLink = ({ href, imgAlt, icon, onClick, className, download = false, ta
         rel="noopener"
         download={download}
         onClick={onClick}
+        className={className ? className : 'socials__icon'}
     >
-        <img src={icon}
-             className={className ? className : 'socials__icon'}
-             alt={imgAlt}
-        />
+        {icon ?
+            <img src={icon}
+                 className={className ? className : 'socials__icon'}
+                 alt={imgAlt}
+            />
+            : null
+        }
+
     </a>
 };
 
