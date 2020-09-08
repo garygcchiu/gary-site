@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import "../styles/main.scss";
 import favicon from '../public/favicon.ico';
 import appleTouchFavicon from '../public/apple-touch-icon.png';
 import manifest from '../public/site.webmanifest';
 import * as ReactGA from '../utils/react-ga';
+import mailgo from "mailgo";
 
 const MyApp = ({Component, pageProps}) => {
     ReactGA.init();
+
+    useEffect(() => {
+        mailgo();
+    }, []);
+
     return <>
         <Head>
             <link rel="shortcut icon" href={favicon} />
