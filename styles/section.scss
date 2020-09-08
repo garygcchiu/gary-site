@@ -37,8 +37,14 @@ section, .section {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
+
+  @media (prefers-color-scheme: dark){
+    background-color: $section-bg-dark;
+  }
+  @media (prefers-color-scheme: light){
+    background-color: $section-bg-light;
+  }
 
   &.alt {
     @media (prefers-color-scheme: dark){
@@ -47,15 +53,6 @@ section, .section {
     @media (prefers-color-scheme: light){
       background-color: $section-bg-alt-light;
     }
-  }
-}
-
-section {
-  @media (prefers-color-scheme: dark){
-    background-color: $section-bg-dark;
-  }
-  @media (prefers-color-scheme: light){
-    background-color: $section-bg-light;
   }
 }
 
