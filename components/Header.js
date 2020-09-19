@@ -1,6 +1,7 @@
 import React from 'react';
 import Switch from "react-switch";
 import { useDarkMode } from 'next-dark-mode'
+import * as ReactGA from '../utils/react-ga';
 
 const Header = () => {
     const { darkModeActive, switchToLightMode, switchToDarkMode } = useDarkMode();
@@ -9,7 +10,14 @@ const Header = () => {
         <div className={`header__theme`}>
             <div className={'header__theme__icon sun'}/>
             <Switch
-                onChange={() => darkModeActive ? switchToLightMode() : switchToDarkMode()}
+                onChange={() => {
+                    ReactGA.sendEvent('Interaction', `Toggled Theme to ${darkModeActive ? 'Light' : 'Dark'}`);
+                    if (darkModeActive) {
+                        switchToLightMode();
+                    } else {
+                        switchToDarkMode();
+                    }
+                }}
                 checked={darkModeActive}
                 checkedIcon={false}
                 uncheckedIcon={false}
