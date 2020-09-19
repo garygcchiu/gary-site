@@ -1,7 +1,8 @@
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Typed from "typed.js";
 import IconLink from './IconLink';
 import arrowDownIcon from '../public/icons/angle-down-light.svg';
+import Header from './Header';
 
 const Landing = () => {
     const descRef = useRef(null);
@@ -22,6 +23,7 @@ const Landing = () => {
     }, []);
 
     return <>
+        <Header />
         <div className={'landing'}>
             <div className={'landing__title'}>
                 Hello!
