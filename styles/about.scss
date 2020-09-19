@@ -1,17 +1,36 @@
 .about {
-  padding-left: 120px;
-  padding-right: 120px;
+  @media screen and (min-width: $screen-xlg) {
+    padding-left: 120px;
+    padding-right: 120px;
+    width: 60%;
+  }
+
   padding-top: 120px;
   margin: 0 auto;
   max-width: 1440px;
-  width: 60%;
+  width: 80%;
   min-height: 100vh;
   height: max-content !important;
 
+
   &__title {
-    font-size: 32px;
-    line-height: 38px;
+    @media screen and (min-width: $screen-xlg) {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 2rem;
+    }
+    @media screen and (min-width: $screen-lg) {
+      font-size: 24px;
+      line-height: 38px;
+    }
+    @media screen and (min-width: $screen-md) {
+      text-align: start;
+    }
+    // Mobile
+    font-size: 18px;
+    line-height: 24px;
     margin-bottom: 2rem;
+    text-align: center;
   }
 
   &__text {
@@ -20,13 +39,31 @@
   }
 
   &__skills {
-    display: flex;
-    justify-content: space-between;
+    @media screen and (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+      text-align: start;
+    }
+    text-align:  center;
+
+    &__title {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
   }
 
   &__company {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+    @media screen and (min-width: $screen-lg) {
+      display: flex;
+      justify-content: space-between;
+      text-align: start;
+    }
+    display: block;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    &__dates {
+      font-size: 14px;
+    }
   }
 }

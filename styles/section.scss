@@ -34,7 +34,6 @@ section, .section {
   flex: 1;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   transition: opacity 0.5s ease-in-out, 0.5s ease-in-out;
   will-change: opacity;
 }
