@@ -1,12 +1,12 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Typed from "typed.js";
 import IconLink from './IconLink';
 import Header from './Header';
 import Socials from './Socials';
+import FadeInDiv from './FadeInDiv';
 
 const Landing = () => {
     const descRef = useRef(null);
-    const [showContent, setShowContent] = useState(false);
 
     useEffect(() => {
         const typed = new Typed(descRef.current, {
@@ -17,8 +17,6 @@ const Landing = () => {
             backDelay: 2500
         });
 
-        setShowContent(true);
-
         // destroy Typed instance on unmounting the component
         return () => {
             typed.destroy();
@@ -26,10 +24,10 @@ const Landing = () => {
     }, []);
 
     return <>
-        <div className={`fade-in-section ${showContent ? 'fade-in-section--visible' : ''}`} style={{ '--animation-order': 0 }} >
+        <FadeInDiv className={'header'}>
             <Header className={'hehe'} />
-        </div>
-        <div className={`landing fade-in-section ${showContent ? 'fade-in-section--visible' : ''}`} style={{ '--animation-order': 1 }}>
+        </FadeInDiv>
+        <FadeInDiv className={'landing'} animationOrder={1}>
             <div className={'landing__title'}>
                 Hello!
             </div>
@@ -42,15 +40,7 @@ const Landing = () => {
             <div className={'landing__cta'}>
                 <Socials />
             </div>
-            <div className={'landing__arrow-down'}>
-                <IconLink
-                    href={undefined}
-                    imgAlt={'Click to View More'}
-                    className={'landing__arrow-down__icon socials__icon arrow-down bounce'}
-                    onClick={() => {}}
-                />
-            </div>
-        </div>
+        </FadeInDiv>
     </>;
 };
 

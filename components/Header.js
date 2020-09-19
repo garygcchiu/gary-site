@@ -1,13 +1,12 @@
 import React from 'react';
 import Switch from "react-switch";
 import { useDarkMode } from 'next-dark-mode'
-import Socials from './Socials';
 
 const Header = () => {
-    const { darkModeActive, switchToLightMode, switchToDarkMode } = useDarkMode()
+    const { darkModeActive, switchToLightMode, switchToDarkMode } = useDarkMode();
 
     return <div className={'header'}>
-        <div className={'header__theme'}>
+        <div className={`header__theme`}>
             <div className={'header__theme__icon sun'}/>
             <Switch
                 onChange={() => darkModeActive ? switchToLightMode() : switchToDarkMode()}

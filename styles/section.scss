@@ -11,17 +11,18 @@
   background-position: center;
 }
 
-.fade-in-section {
+.fade-in-div {
   opacity: 0;
   visibility: hidden;
+  transform: translate(0, -10px);
   transition: opacity 1s ease-in-out, 1s ease-in-out;
   transition-delay: calc(var(--animation-order) * 1000ms);
-  will-change: opacity, visibility;
+  will-change: visibility, color, translate;
 
   &--visible {
     opacity: 1;
-    transform: none;
     visibility: visible;
+    transform: translate(0, 0px);
   }
 }
 
@@ -31,13 +32,6 @@ section, .section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
-  @media (prefers-color-scheme: dark){
-    background-color: $section-bg-dark;
-  }
-  @media (prefers-color-scheme: light){
-    background-color: $section-bg-light;
-  }
 }
 
 .image-section {

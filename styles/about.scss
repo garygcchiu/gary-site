@@ -1,0 +1,21 @@
+.about {
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 120px;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 60%;
+  height: 100vh;
+  max-height: 100%;
+
+  &__title {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
