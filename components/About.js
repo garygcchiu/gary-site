@@ -5,7 +5,7 @@ const About = forwardRef((props, ref) => {
     return <div className={'about'} ref={ref}>
         <FadeInDiv threshold={0.8} className={'pb-5 mb-5'}>
             <h2 className={'about__title'}>
-                Nice to meet you.
+                Nice to meet you 😄
             </h2>
             <div className={'about__text'}>
                 I’m currently a Software Developer at Konrad Group, building innovative solutions for industry-leading clients.<br/>
@@ -44,9 +44,9 @@ const About = forwardRef((props, ref) => {
                 </FadeInDiv>
                 <FadeInDiv threshold={0.7} animationOrder={3} fast>
                     <div className={'mb-2'}><b>DevOps</b></div>
-                    <div>Amazon Web Services (AWS)</div>
+                    <div>Amazon Web Services</div>
                     <div>Docker</div>
-                    <div>Google Cloud Platform (GCP)</div>
+                    <div>Google Cloud Platform</div>
                     <div>Pivotal Cloud Foundry</div>
                     <div>Concourse CI/CD</div>
                     <div>Mocha, Chai</div>
@@ -58,8 +58,22 @@ const About = forwardRef((props, ref) => {
                 Experience
             </h2>
             <div className={'about__text'}>
-                I’m currently a Software Developer at Konrad Group, building innovative solutions for industry-leading clients.<br/>
-                I am passionate about using technology to improve quality of life — and making it look good.
+                <div className={'about__company'}>
+                    <div><b>Konrad Group</b> - Software Developer</div>
+                    <div>May 2019 – Present</div>
+                </div>
+                <div className={'about__company'}>
+                    <div><b>Manulife</b> - Software Developer/Project Coordinator Co-op</div>
+                    <div>May 2018 – August 2018 </div>
+                </div>
+                <div className={'about__company'}>
+                    <div><b>Mapsted</b> - Software Developer Intern</div>
+                    <div>January 2018 – April 2018</div>
+                </div>
+                <div className={'about__company'}>
+                    <div><b>Big Blue Bubble</b> - Games Programmer - Intern</div>
+                    <div>May 2017 – December 2017</div>
+                </div>
             </div>
         </FadeInDiv>
     </div>

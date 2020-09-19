@@ -15,12 +15,18 @@
   }
 
   &__text {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
   }
 
   &__skills {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__company {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
   }
 }
