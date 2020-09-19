@@ -9,7 +9,7 @@ const About = forwardRef((props, ref) => {
             </h2>
             <div className={'about__text'}>
                 I’m currently a Software Developer at Konrad Group, building innovative solutions for industry-leading clients.<br/>
-                I am passionate about using technology to improve quality of life — and making it look good.
+                I am passionate about using technology to improve quality of life — and making it look & feel as good as possible.
             </div>
         </FadeInDiv>
         <FadeInDiv threshold={0.3} className={'py-5 my-5'} animationOrder={0}>
