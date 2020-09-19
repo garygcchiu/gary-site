@@ -24,11 +24,14 @@
     visibility: visible;
     transform: translate(0, 0px);
   }
+
+  &--fast {
+    transition-delay: calc(var(--animation-order) * 400ms);
+  }
 }
 
 section, .section {
   flex: 1;
-  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;

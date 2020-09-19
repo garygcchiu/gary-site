@@ -5,6 +5,9 @@
   max-width: 1440px;
   width: 60%;
   position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 
   &__title {
     font-size: 32px;

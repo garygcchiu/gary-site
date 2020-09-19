@@ -11,9 +11,9 @@ const Contact = () => {
                 Contact me!
             </a>
         </FadeInDiv>
-        <FadeInDiv className={'contact__footer'}>
+        <div className={'contact__footer'}>
             <Footer />
-        </FadeInDiv>
+        </div>
     </div>;
 };
 
