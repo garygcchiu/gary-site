@@ -9,32 +9,6 @@
     width: 20px;
     background-repeat: no-repeat;
     background-position: center;
-
-    &--resume {
-      @media (prefers-color-scheme: dark){
-        background-image: url(../public/icons/file-light.svg);
-      }
-      @media (prefers-color-scheme: light){
-        background-image: url(../public/icons/file.svg);
-      }
-    }
-
-    &--github {
-      @media (prefers-color-scheme: dark){
-        background-image: url(../public/icons/github-light.svg);
-      }
-      @media (prefers-color-scheme: light){
-        background-image: url(../public/icons/github.svg);
-      }
-    }
-
-    &--linkedin {
-      @media (prefers-color-scheme: dark){
-        background-image: url(../public/icons/linkedin-light.svg);
-      }
-      @media (prefers-color-scheme: light){
-        background-image: url(../public/icons/linkedin.svg);
-      }
-    }
+    border: none !important;
   }
 }

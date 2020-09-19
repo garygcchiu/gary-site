@@ -14,7 +14,7 @@
   &__cta {
     font-size: 20px;
     line-height: 24px;
-    margin-top: 3rem;
+    margin-top: 4rem;
 
     a {
       color: inherit;
@@ -28,17 +28,21 @@
 
   &__socials {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
 
   &__arrow-down {
     position: absolute;
     bottom: 30px;
+    left: 49%;
+    display: flex;
 
     &__icon {
       height: 30px;
       width: 45px;
+      background-repeat: no-repeat;
+      background-position: center;
       cursor: pointer;
     }
   }
