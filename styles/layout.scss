@@ -18,7 +18,7 @@ body {
 .dark-mode {
   color: $text-primary-dark;
 
-  .section {
+  section {
       background-color: $section-bg-dark;
   }
 
@@ -30,7 +30,7 @@ body {
 .light-mode {
   color: $text-primary-light;
 
-  .section {
+  section {
     background-color: $section-bg-light;
   }
 
