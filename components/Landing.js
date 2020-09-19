@@ -1,13 +1,12 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Typed from "typed.js";
 import IconLink from './IconLink';
-import arrowDownIcon from '../public/icons/angle-down-light.svg';
 import Header from './Header';
 import Socials from './Socials';
-import resume from '../public/Gary_Chiu_Resume_2020.pdf';
 
 const Landing = () => {
     const descRef = useRef(null);
+    const [showContent, setShowContent] = useState(false);
 
     useEffect(() => {
         const typed = new Typed(descRef.current, {
@@ -18,6 +17,8 @@ const Landing = () => {
             backDelay: 2500
         });
 
+        setShowContent(true);
+
         // destroy Typed instance on unmounting the component
         return () => {
             typed.destroy();
@@ -25,8 +26,10 @@ const Landing = () => {
     }, []);
 
     return <>
-        <Header />
-        <div className={'landing'}>
+        <div className={`fade-in-section ${showContent ? 'fade-in-section--visible' : ''}`} style={{ '--animation-order': 0 }} >
+            <Header className={'hehe'} />
+        </div>
+        <div className={`landing fade-in-section ${showContent ? 'fade-in-section--visible' : ''}`} style={{ '--animation-order': 1 }}>
             <div className={'landing__title'}>
                 Hello!
             </div>

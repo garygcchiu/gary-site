@@ -14,14 +14,14 @@
 .fade-in-section {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.75s ease-in-out, 0.75s ease-in-out;
+  transition: opacity 1s ease-in-out, 1s ease-in-out;
+  transition-delay: calc(var(--animation-order) * 1000ms);
   will-change: opacity, visibility;
 
   &--visible {
     opacity: 1;
     transform: none;
     visibility: visible;
-    display: flex;
   }
 }
 
