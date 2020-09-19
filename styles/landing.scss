@@ -24,7 +24,6 @@
       line-height: 38px;
     }
 
-
     // Mobile
     font-size: 18px;
     line-height: 24px;
@@ -34,12 +33,18 @@
   &__cta {
     font-size: 20px;
     line-height: 24px;
-    margin-top: 4rem;
+    position: absolute;
+    bottom: 150px;
+    align-self: center;
     display: flex;
     justify-content: center;
 
-    @media screen and (min-width: $screen-lg) {
+    @media screen and (min-width: $screen-md) {
       display: block;
+      position: relative;
+      bottom: 0;
+      align-self: start;
+      margin-top: 4rem;
     }
 
     a {

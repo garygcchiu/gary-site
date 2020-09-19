@@ -27,7 +27,7 @@ const Landing = () => {
             <Header className={'hehe'} />
         </FadeInDiv>
         <FadeInDiv className={'landing'} animationOrder={1}>
-            <div>
+            <div className={'d-flex flex-column'}>
                 <div className={'landing__title'}>
                     Hello!
                 </div>
