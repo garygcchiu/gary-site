@@ -9,13 +9,6 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
-
-  @media (prefers-color-scheme: dark){
-    background-image: url('../public/Toronto-Night.jpg');
-  }
-  @media (prefers-color-scheme: light){
-    background-image: url('../public/Toronto-Day.jpg');
-  }
 }
 
 .fade-in-section {
@@ -44,15 +37,6 @@ section, .section {
   }
   @media (prefers-color-scheme: light){
     background-color: $section-bg-light;
-  }
-
-  &.alt {
-    @media (prefers-color-scheme: dark){
-      background-color: $section-bg-dark;
-    }
-    @media (prefers-color-scheme: light){
-      background-color: $section-bg-alt-light;
-    }
   }
 }
 

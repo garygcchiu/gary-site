@@ -5,13 +5,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
   font-style: normal;
-
-  @media (prefers-color-scheme: dark){
-    color: #E7E7E7;
-  }
-  @media (prefers-color-scheme: light){
-    color: #444452;
-  }
 }
 
 * {
@@ -20,4 +13,28 @@ body {
 
 .m-by {
   display: none !important;
+}
+
+.dark-mode {
+  color: $text-primary-dark;
+
+  .section {
+      background-color: $section-bg-dark;
+  }
+
+  #background_wrap {
+    background-image: url('../public/Toronto-Night.jpg');
+  }
+}
+
+.light-mode {
+  color: $text-primary-light;
+
+  .section {
+    background-color: $section-bg-light;
+  }
+
+  #background_wrap {
+    background-image: url('../public/Toronto-Day.jpg');
+  }
 }

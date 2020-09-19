@@ -7,4 +7,10 @@
   padding-bottom: 0.25rem;
   display: flex;
   align-items: center;
+
+  &__theme {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
 }
