@@ -53,7 +53,7 @@ const About = forwardRef((props, ref) => {
                 </FadeInDiv>
             </div>
         </FadeInDiv>
-        <FadeInDiv threshold={0.3} className={'py-5 my-5'}>
+        <FadeInDiv threshold={0.15} className={'py-5 my-5'} animationOrder={2}>
             <h2 className={'about__title'}>
                 Experience
             </h2>

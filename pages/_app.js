@@ -6,13 +6,15 @@ import appleTouchFavicon from '../public/apple-touch-icon.png';
 import manifest from '../public/site.webmanifest';
 import * as ReactGA from '../utils/react-ga';
 import mailgo from "mailgo";
-import withDarkMode from 'next-dark-mode'
+import withDarkMode from 'next-dark-mode';
+import smoothscroll from 'smoothscroll-polyfill';
 
 const MyApp = ({Component, pageProps}) => {
     ReactGA.init();
 
     useEffect(() => {
         mailgo();
+        smoothscroll.polyfill();
     }, []);
 
     return <>

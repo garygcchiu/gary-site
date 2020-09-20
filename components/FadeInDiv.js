@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 const FadeInDiv = ({ children, className = '', threshold, animationOrder = 0, fast = false }) => {
