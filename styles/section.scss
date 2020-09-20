@@ -9,54 +9,39 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
-
-  @media (prefers-color-scheme: dark){
-    background-image: url('../public/Toronto-Night.jpg');
-  }
-  @media (prefers-color-scheme: light){
-    background-image: url('../public/Toronto-Day.jpg');
-  }
 }
 
-.fade-in-section {
+.fade-in-div {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.75s ease-in-out, 0.75s ease-in-out;
-  will-change: opacity, visibility;
+  transform: translate(0, -10px);
+  transition: opacity 1s ease-in-out, 1s ease-in-out;
+  will-change: visibility, color, translate;
+  transition-delay: 0ms;
+
+  @media screen and (min-width: $screen-lg) {
+    transition-delay: calc(var(--animation-order) * 1000ms);
+  }
 
   &--visible {
     opacity: 1;
-    transform: none;
     visibility: visible;
-    display: flex;
+    transform: translate(0, 0px);
+  }
+
+  &--fast {
+    @media screen and (min-width: $screen-lg) {
+      transition-delay: calc(var(--animation-order) * 400ms);
+    }
   }
 }
 
 section, .section {
   flex: 1;
-  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  &.alt {
-    @media (prefers-color-scheme: dark){
-      background-color: $section-bg-dark;
-    }
-    @media (prefers-color-scheme: light){
-      background-color: $section-bg-alt-light;
-    }
-  }
-}
-
-section {
-  @media (prefers-color-scheme: dark){
-    background-color: $section-bg-dark;
-  }
-  @media (prefers-color-scheme: light){
-    background-color: $section-bg-light;
-  }
+  transition: opacity 0.5s ease-in-out, 0.5s ease-in-out;
+  will-change: opacity;
 }
 
 .image-section {

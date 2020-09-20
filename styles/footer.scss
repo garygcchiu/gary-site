@@ -1,0 +1,19 @@
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+
+  &__copyright {
+    &__arr {
+      @media screen and (min-width: $screen-md) {
+        display: initial;
+      }
+      display: none;
+    }
+  }
+}

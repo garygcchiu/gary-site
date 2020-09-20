@@ -2,14 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-
-  @media (prefers-color-scheme: dark){
-    color: #ffffff;
-  }
-  @media (prefers-color-scheme: light){
-    color: #000000;
-  }
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
 }
 
 * {
@@ -18,4 +13,118 @@ body {
 
 .m-by {
   display: none !important;
+}
+
+.dark-mode {
+  color: $text-primary-dark;
+
+  section {
+      background-color: $section-bg-dark;
+  }
+
+  #background_wrap {
+    background-image: url('../public/Toronto-Night.jpg');
+  }
+
+  .sun {
+    background-image: url('../public/icons/sun-white.svg');
+  }
+
+  .moon {
+    background-image: url('../public/icons/moon-white.svg');
+  }
+
+  .resume {
+    background-image: url(../public/icons/file-light.svg);
+  }
+
+  .github {
+    background-image: url(../public/icons/github-light.svg);
+  }
+
+  .linkedin {
+    background-image: url(../public/icons/linkedin-light.svg);
+  }
+
+  .mail {
+    background-image: url(../public/icons/envelope-light.svg);
+  }
+
+  .arrow-down {
+    background-image: url(../public/icons/angle-down-light.svg);
+  }
+
+  .footer__copyright {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  a {
+    color: inherit;
+    border-bottom: 1px solid #f7f7f7;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 2px solid #f7f7f7;
+    }
+  }
+
+  .sk-chase-dot:before {
+    background-color: $text-primary-dark;
+  }
+}
+
+.light-mode {
+  color: $text-primary-light;
+
+  section {
+    background-color: $section-bg-light;
+  }
+
+  #background_wrap {
+    background-image: url('../public/Toronto-Day.jpg');
+  }
+
+  .sun {
+    background-image: url('../public/icons/sun-black.svg');
+  }
+
+  .moon {
+    background-image: url('../public/icons/moon-black.svg');
+  }
+
+  .resume {
+    background-image: url(../public/icons/file.svg);
+  }
+
+  .github {
+    background-image: url(../public/icons/github.svg);
+  }
+
+  .linkedin {
+    background-image: url(../public/icons/linkedin.svg);
+  }
+
+  .mail {
+    background-image: url(../public/icons/envelope.svg);
+  }
+
+  .arrow-down {
+    background-image: url(../public/icons/angle-down.svg);
+  }
+
+  .footer__copyright {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  a {
+    color: inherit;
+    border-bottom: 1px solid $text-primary-light;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 2px solid $text-primary-light;
+    }
+  }
+
+  .sk-chase-dot:before {
+    background-color: $text-primary-light;
+  }
 }

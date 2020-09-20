@@ -1,0 +1,20 @@
+import Footer from './Footer';
+import FadeInDiv from './FadeInDiv';
+
+const Contact = () => {
+    return <div className={'contact'}>
+        <FadeInDiv className={'contact__main'} threshold={0.5}>
+            <span className={'mr-2 contact__text'}>
+                Interested?
+            </span>
+            <a href="#mailgo" data-address="gary.gc.chiu" data-domain="gmail.com">
+                Contact me!
+            </a>
+        </FadeInDiv>
+        <div className={'contact__footer'}>
+            <Footer />
+        </div>
+    </div>;
+};
+
+export default Contact;

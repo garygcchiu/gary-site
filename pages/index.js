@@ -1,23 +1,13 @@
-import { useRef, useEffect } from 'react';
-import Typed from 'typed.js';
-import resume from '../public/Gary_Chiu_Resume_2020.pdf';
-import githubIcon from '../public/icons/github.svg';
-import fileIcon from '../public/icons/file.svg';
-import linkedinIcon from '../public/icons/linkedin.svg';
-import arrowDownIcon from '../public/icons/angle-down.svg';
-import Header from '../components/Header';
-import IconLink from '../components/IconLink';
-import FadeInSection from '../components/FadeInSection';
+import React, { useState, createRef } from 'react';
 import ImageSection from '../components/ImageSection';
+import Landing from '../components/Landing';
+import About from '../components/About';
+import Contact from '../components/Contact';
 import * as ReactGA from '../utils/react-ga';
-
-const handleResumeDownloaded = () => {
-    ReactGA.sendEvent('Link', 'Downloaded Resume');
-};
-
-const handleSocialLinkClicked = website => {
-    ReactGA.sendEvent('Link', `Clicked ${website} Profile`);
-};
+import { useDarkMode } from 'next-dark-mode'
+import IconLink from '../components/IconLink';
+import FadeInDiv from '../components/FadeInDiv';
+import Loader from '../components/Loader';
 
 const scrollToSection = ref => {
     const el = ref.current ? ref.current : ref;
@@ -30,80 +20,35 @@ const scrollToSection = ref => {
 
 export default function Index() {
     ReactGA.pageView('/');
-    const aboutRef = useRef(null);
-    const descRef = useRef(null);
+    const { darkModeActive } = useDarkMode();
+    const [isLoading, setIsLoading] = useState(true);
+    const aboutRef = createRef();
 
-    useEffect(() => {
-        const typed = new Typed(descRef.current, {
-            strings: ['Full Stack Web Developer', 'Software Engineer', 'Consultant'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: true,
-            backDelay: 2500
-        });
-
-        // destroy Typed instance on unmounting the component
-        return () => {
-            typed.destroy();
-        };
-    }, []);
-
-    return (<>
-        <Header />
-        <main>
-            <div id="background_wrap" />
-            <FadeInSection fadeChildrenOnly={true}>
-                <div>
-                    <h1 className="landing__title">
-                        Gary Chiu
-                    </h1>
-                    <div className={'landing__description'}>
-                        <span className="description" ref={descRef} />
-                    </div>
-                    <div className={'landing__socials'}>
-                        <IconLink
-                            href={resume}
-                            imgAlt={'Resume Download'}
-                            className={'socials__icon socials__icon--resume'}
-                            download={true}
-                            onClick={handleResumeDownloaded}
-                        />
-                        <span className={"socials__separator"}>|</span>
-                        <IconLink
-                            href={'https://www.github.com/garygcchiu'}
-                            imgAlt={'GitHub Profile'}
-                            className={'socials__icon socials__icon--github'}
-                            onClick={() => handleSocialLinkClicked('Github')}
-                        />
-                        <span className={"socials__separator"}>|</span>
-                        <IconLink
-                            href={'https://www.linkedin.com/in/garygcchiu/'}
-                            imgAlt={'LinkedIn Profile'}
-                            className={'socials__icon socials__icon--linkedin'}
-                            onClick={() => handleSocialLinkClicked('LinkedIn')}
-                        />
-                    </div>
-                </div>
-                <div className={'landing__arrow-down'}>
-                    <IconLink
-                        href={undefined}
-                        imgAlt={'Scroll to About Me'}
-                        icon={arrowDownIcon}
-                        onClick={() => scrollToSection(aboutRef)}
-                        className={'landing__arrow-down__icon bounce'}
-                        target={'_self'}
-                    />
-                </div>
-            </FadeInSection>
-            <ImageSection />
-            <FadeInSection className={'dark alt'} fadeChildrenOnly={true}>
-                <div ref={aboutRef} className={'mb-3'}>
-                    Hi! 👋🏼
-                </div>
-                <a href="#mailgo" data-address="gary.gc.chiu" data-domain="gmail.com">
-                    Contact me!
-                </a>
-            </FadeInSection>
-        </main>
-    </>)
+    return <div className={darkModeActive ? 'dark-mode' : 'light-mode'}>
+        {
+            isLoading ? <Loader onLoadComplete={() => setIsLoading(false)} /> :
+                <main>
+                    <div id="background_wrap" />
+                    <section>
+                        <Landing />
+                        <FadeInDiv className={'landing__arrow-down'} animationOrder={2}>
+                            <IconLink
+                                href={undefined}
+                                imgAlt={'Click to View More'}
+                                className={'landing__arrow-down__icon socials__icon arrow-down bounce'}
+                                onClick={() => scrollToSection(aboutRef)}
+                            />
+                        </FadeInDiv>
+                    </section>
+                    <ImageSection/>
+                    <section>
+                        <About ref={aboutRef} />
+                    </section>
+                    <ImageSection />
+                    <section>
+                        <Contact />
+                    </section>
+                </main>
+        }
+    </div>;
 }

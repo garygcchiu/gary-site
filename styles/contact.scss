@@ -1,0 +1,24 @@
+.contact {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  &__main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  &__text {
+    margin-bottom: 1px;
+  }
+
+  &__footer {
+    width: 100%;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+  }
+}
