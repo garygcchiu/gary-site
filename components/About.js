@@ -29,7 +29,7 @@ const About = forwardRef((props, ref) => {
                     <div>C#</div>
                     <div>Elasticsearch</div>
                 </FadeInDiv>
-                <FadeInDiv threshold={0.3} animationOrder={2} fast className={'mb-5'}>
+                <FadeInDiv threshold={0.4} animationOrder={2} fast className={'mb-5'}>
                     <div className={'about__skills__title'}>Frameworks</div>
                     <div>React</div>
                     <div>Node.js</div>
