@@ -60,28 +60,29 @@ const About = forwardRef((props, ref) => {
             <div className={'about__text'}>
                 <div className={'about__company'}>
                     <div>
-                        <b>Konrad Group</b>
+                        <a href={'https://konrad.com'} target={'_blank'}><b>Konrad Group</b></a>
                         <div>Software Developer</div>
                     </div>
                     <div className={'about__company__dates'}>May 2019 – Present</div>
                 </div>
                 <div className={'about__company'}>
                     <div>
-                        <b>Manulife</b>
+                        <a href={'https://manulife.ca'} target={'_blank'}><b>Manulife</b></a>
                         <div>Software Developer/Project Coordinator Co-op</div>
                     </div>
                     <div className={'about__company__dates'}>May 2018 – August 2018 </div>
                 </div>
                 <div className={'about__company'}>
                     <div>
-                        <b>Mapsted</b>
+                        <a href={'https://mapsted.com'} target={'_blank'}><b>Mapsted</b></a>
                         <div>Software Developer Intern</div>
                     </div>
                     <div className={'about__company__dates'}>January 2018 – April 2018</div>
                 </div>
                 <div className={'about__company'}>
                     <div>
-                        <b>Big Blue Bubble</b><div>Games Programmer - Intern</div>
+                        <a href={'https://bigbluebubble.com'} target={'_blank'}><b>Big Blue Bubble</b></a>
+                        <div>Games Programmer - Intern</div>
                     </div>
                     <div className={'about__company__dates'}>May 2017 – December 2017</div>
                 </div>
