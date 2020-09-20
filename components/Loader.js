@@ -8,14 +8,18 @@ const Loader = ({ onLoadComplete }) => {
             setLoaded(true);
             setTimeout(() => {
                 onLoadComplete();
-            }, 750);
+            }, 700);
         }, 1500);
     }, []);
 
     return <section className={'loader'}>
-        <div className={`lds-ripple ${loaded ? 'lds-ripple--loaded' : ''}`}>
-            <div />
-            <div />
+        <div className={`sk-chase ${loaded ? 'sk-chase--loaded': ''}`}>
+            <div className="sk-chase-dot" />
+            <div className="sk-chase-dot" />
+            <div className="sk-chase-dot" />
+            <div className="sk-chase-dot" />
+            <div className="sk-chase-dot" />
+            <div className="sk-chase-dot" />
         </div>
     </section>
 };

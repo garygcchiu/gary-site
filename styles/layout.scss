@@ -66,6 +66,10 @@ body {
       border-bottom: 2px solid #f7f7f7;
     }
   }
+
+  .sk-chase-dot:before {
+    background-color: $text-primary-dark;
+  }
 }
 
 .light-mode {
@@ -118,5 +122,9 @@ body {
       text-decoration: none;
       border-bottom: 2px solid $text-primary-light;
     }
+  }
+
+  .sk-chase-dot:before {
+    background-color: $text-primary-light;
   }
 }
