@@ -15,12 +15,12 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(0, -10px);
-  transition: opacity 1s ease-in-out, visibility 1s ease-in-out, transform 1s ease;
+  transition: opacity 0.75s ease-in-out, visibility 0.75s ease-in-out, transform 0.75s ease;
   will-change: visibility, color, translate;
   transition-delay: 0ms;
 
   @media screen and (min-width: $screen-lg) {
-    transition-delay: calc(var(--animation-order) * 1000ms);
+    transition-delay: calc(var(--animation-order) * 750ms);
   }
 
   &--visible {

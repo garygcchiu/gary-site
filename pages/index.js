@@ -31,7 +31,7 @@ export default function Index() {
                     <div id="background_wrap" />
                     <section>
                         <Landing />
-                        <FadeInDiv className={'landing__arrow-down'} animationOrder={2}>
+                        <FadeInDiv className={'landing__arrow-down'} animationOrder={2} prioritizeOrder>
                             <IconLink
                                 href={undefined}
                                 imgAlt={'Click to View More'}

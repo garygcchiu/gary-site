@@ -10,7 +10,7 @@ const FadeInDiv = ({ children, className = '', threshold, animationOrder = 0, fa
 
     useEffect(() => {
         if (inView){
-            setTimeout(() => setLoaded(true), 1000);
+            setTimeout(() => setLoaded(true), 750);
         }
     }, [inView]);
 

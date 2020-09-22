@@ -23,10 +23,10 @@ const Landing = () => {
     }, []);
 
     return <>
-        <FadeInDiv className={'header'}>
-            <Header className={'hehe'} />
+        <FadeInDiv className={'header'} animationOrder={0} prioritizeOrder>
+            <Header />
         </FadeInDiv>
-        <FadeInDiv className={'landing'} animationOrder={1}>
+        <FadeInDiv className={'landing'} animationOrder={1} prioritizeOrder>
             <div className={'d-flex flex-column'}>
                 <div className={'landing__title'}>
                     Hello!
