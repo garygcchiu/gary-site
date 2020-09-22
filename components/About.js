@@ -17,7 +17,7 @@ const About = forwardRef((props, ref) => {
                 Skills
             </h2>
             <div className={'about__text about__skills'}>
-                <FadeInDiv threshold={0.5} animationOrder={1} fast className={'mb-5'}>
+                <FadeInDiv threshold={0.5} animationOrder={1} fast className={'mb-5'} prioritizeOrder>
                     <div className={'about__skills__title'}>Languages</div>
                     <div>JavaScript</div>
                     <div>HTML</div>
@@ -29,7 +29,7 @@ const About = forwardRef((props, ref) => {
                     <div>C#</div>
                     <div>Elasticsearch</div>
                 </FadeInDiv>
-                <FadeInDiv threshold={0.4} animationOrder={2} fast className={'mb-5'}>
+                <FadeInDiv threshold={0.4} animationOrder={2} fast className={'mb-5'} prioritizeOrder>
                     <div className={'about__skills__title'}>Frameworks</div>
                     <div>React</div>
                     <div>Node.js</div>
@@ -42,7 +42,7 @@ const About = forwardRef((props, ref) => {
                     <div>Angular</div>
                     <div>Unity3D</div>
                 </FadeInDiv>
-                <FadeInDiv threshold={0.3} animationOrder={3} fast>
+                <FadeInDiv threshold={0.3} animationOrder={3} fast prioritizeOrder>
                     <div className={'about__skills__title'}>DevOps</div>
                     <div>Amazon Web Services</div>
                     <div>Docker</div>
@@ -53,7 +53,7 @@ const About = forwardRef((props, ref) => {
                 </FadeInDiv>
             </div>
         </FadeInDiv>
-        <FadeInDiv threshold={0.15} className={'py-5 my-5'} animationOrder={2}>
+        <FadeInDiv threshold={0.3} className={'py-5 my-5'} animationOrder={2}>
             <h2 className={'about__title'}>
                 Experience
             </h2>
