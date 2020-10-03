@@ -23,12 +23,12 @@ const Landing = () => {
     }, []);
 
     return <div className={'landing'}>
-        <FadeIn>
-            <div className={'header__wrapper'}>
-                <Header />
-            </div>
-        </FadeIn>
-        <FadeIn>
+        <div className={'landing__header'}>
+            <FadeIn>
+                    <Header />
+            </FadeIn>
+        </div>
+        <FadeIn delay={500}>
             <div className={'d-flex flex-column'}>
                 <div className={'landing__title'}>
                     Hello!

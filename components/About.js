@@ -3,22 +3,24 @@ import FadeIn from './FadeIn';
 
 const About = forwardRef((props, ref) => {
     return <div className={'about'} ref={ref}>
-        <FadeIn className={'pb-5 mb-5'}>
+        <FadeIn>
             <h2 className={'about__title'}>
                 Nice to meet you 😄
             </h2>
-            <div className={'about__text'}>
+            <div className={'about__text pb-5 mb-5'}>
                 I’m currently a Software Developer at Konrad Group, building innovative solutions for industry-leading clients.<br/>
                 I am passionate about using technology to improve quality of life — and making it look & feel as good as possible.
             </div>
         </FadeIn>
-        <FadeIn className={'py-5 my-5'} animationOrder={0}>
-            <h2 className={'about__title'}>
+        <FadeIn>
+            <h2 className={'about__title pt-5'}>
                 Skills
             </h2>
-            <div className={'about__text about__skills'}>
-                <FadeIn fast prioritizeOrder>
-                    <div className={'my-5'}>
+        </FadeIn>
+        <div className={'about__skills about__text'}>
+            <FadeIn cascade>
+                <div className={'mb-5'}>
+                    <div>
                         <div className={'about__skills__title'}>Languages</div>
                         <div>JavaScript</div>
                         <div>HTML</div>
@@ -30,9 +32,9 @@ const About = forwardRef((props, ref) => {
                         <div>C#</div>
                         <div>Elasticsearch</div>
                     </div>
-                </FadeIn>
-                <FadeIn fast prioritizeOrder>
-                    <div className={'my-5'}>
+                </div>
+                <div className={'mb-5'}>
+                    <div>
                         <div className={'about__skills__title'}>Frameworks</div>
                         <div>React</div>
                         <div>Node.js</div>
@@ -45,8 +47,8 @@ const About = forwardRef((props, ref) => {
                         <div>Angular</div>
                         <div>Unity3D</div>
                     </div>
-                </FadeIn>
-                <FadeIn fast prioritizeOrder>
+                </div>
+                <div className={'mb-5'}>
                     <div>
                         <div className={'about__skills__title'}>DevOps</div>
                         <div>Amazon Web Services</div>
@@ -56,9 +58,9 @@ const About = forwardRef((props, ref) => {
                         <div>Concourse CI/CD</div>
                         <div>Mocha, Chai</div>
                     </div>
-                </FadeIn>
-            </div>
-        </FadeIn>
+                </div>
+            </FadeIn>
+        </div>
         <FadeIn className={'py-5 my-5'}>
             <div >
                 <h2 className={'about__title'}>

@@ -31,7 +31,7 @@ export default function Index() {
                     <div id="background_wrap" />
                     <section>
                         <Landing />
-                        <FadeIn className={'landing__arrow-down'}>
+                        <FadeIn className={'landing__arrow-down'} delay={1500}>
                             <IconLink
                                 href={undefined}
                                 imgAlt={'Click to View More'}

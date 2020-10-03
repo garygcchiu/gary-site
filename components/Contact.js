@@ -3,13 +3,15 @@ import FadeIn from './FadeIn';
 
 const Contact = () => {
     return <div className={'contact'}>
-        <FadeIn className={'contact__main'} threshold={0.5}>
-            <span className={'mr-2 contact__text'}>
-                Interested?
-            </span>
-            <a href="#mailgo" data-address="gary.gc.chiu" data-domain="gmail.com">
-                Contact me!
-            </a>
+        <FadeIn className={'contact__main'}>
+            <div  className={'contact__main'}>
+                <span className={'mr-2 contact__text'}>
+                    Interested?
+                </span>
+                <a href="#mailgo" data-address="gary.gc.chiu" data-domain="gmail.com">
+                    Contact me!
+                </a>
+            </div>
         </FadeIn>
         <div className={'contact__footer'}>
             <Footer />

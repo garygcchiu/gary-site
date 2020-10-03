@@ -53,7 +53,7 @@
   }
 
   &__company {
-    @media screen and (min-width: $screen-lg) {
+    @media screen and (min-width: $screen-md) {
       display: flex;
       justify-content: space-between;
       text-align: start;

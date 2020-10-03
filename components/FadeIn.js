@@ -13,12 +13,15 @@ const customAnimation = keyframes`
   }
 `;
 
-const FadeIn = ({ children, className = '', fast }) => {
+const FadeIn = ({ children, className = '', fast, cascade = false, delay = 0 }) => {
     return (
-        <Reveal keyframes={customAnimation} className={className} triggerOnce fraction={0.5}>
-            <div>
-                {children}
-            </div>
+        <Reveal keyframes={customAnimation}
+                className={className}
+                triggerOnce fraction={0.5}
+                cascade={cascade}
+                delay={delay}
+        >
+            {children}
         </Reveal>
     );
 };
