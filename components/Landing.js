@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import Typed from "typed.js";
 import Header from './Header';
 import Socials from './Socials';
-import FadeInDiv from './FadeInDiv';
+import FadeIn from './FadeIn';
 
 const Landing = () => {
     const descRef = useRef(null);
@@ -22,11 +22,13 @@ const Landing = () => {
         };
     }, []);
 
-    return <>
-        <FadeInDiv className={'header'} animationOrder={0} prioritizeOrder>
-            <Header />
-        </FadeInDiv>
-        <FadeInDiv className={'landing'} animationOrder={1} prioritizeOrder>
+    return <div className={'landing'}>
+        <FadeIn>
+            <div className={'header__wrapper'}>
+                <Header />
+            </div>
+        </FadeIn>
+        <FadeIn>
             <div className={'d-flex flex-column'}>
                 <div className={'landing__title'}>
                     Hello!
@@ -41,8 +43,8 @@ const Landing = () => {
                     <Socials />
                 </div>
             </div>
-        </FadeInDiv>
-    </>;
+        </FadeIn>
+    </div>;
 };
 
 export default Landing;

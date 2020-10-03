@@ -6,7 +6,7 @@ import Contact from '../components/Contact';
 import * as ReactGA from '../utils/react-ga';
 import { useDarkMode } from 'next-dark-mode'
 import IconLink from '../components/IconLink';
-import FadeInDiv from '../components/FadeInDiv';
+import FadeIn from '../components/FadeIn';
 import Loader from '../components/Loader';
 
 const scrollToSection = ref => {
@@ -31,14 +31,14 @@ export default function Index() {
                     <div id="background_wrap" />
                     <section>
                         <Landing />
-                        <FadeInDiv className={'landing__arrow-down'} animationOrder={2} prioritizeOrder>
+                        <FadeIn className={'landing__arrow-down'}>
                             <IconLink
                                 href={undefined}
                                 imgAlt={'Click to View More'}
                                 className={'landing__arrow-down__icon socials__icon arrow-down bounce'}
                                 onClick={() => scrollToSection(aboutRef)}
                             />
-                        </FadeInDiv>
+                        </FadeIn>
                     </section>
                     <ImageSection/>
                     <section>

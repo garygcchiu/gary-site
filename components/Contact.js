@@ -1,16 +1,16 @@
 import Footer from './Footer';
-import FadeInDiv from './FadeInDiv';
+import FadeIn from './FadeIn';
 
 const Contact = () => {
     return <div className={'contact'}>
-        <FadeInDiv className={'contact__main'} threshold={0.5}>
+        <FadeIn className={'contact__main'} threshold={0.5}>
             <span className={'mr-2 contact__text'}>
                 Interested?
             </span>
             <a href="#mailgo" data-address="gary.gc.chiu" data-domain="gmail.com">
                 Contact me!
             </a>
-        </FadeInDiv>
+        </FadeIn>
         <div className={'contact__footer'}>
             <Footer />
         </div>
