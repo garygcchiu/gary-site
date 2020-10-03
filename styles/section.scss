@@ -11,31 +11,6 @@
   background-position: center;
 }
 
-.fade-in-div {
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(0, -10px);
-  transition: opacity 0.75s ease-in-out, visibility 0.75s ease-in-out, transform 0.75s ease;
-  will-change: visibility, color, translate;
-  transition-delay: 0ms;
-
-  @media screen and (min-width: $screen-lg) {
-    transition-delay: calc(var(--animation-order) * 750ms);
-  }
-
-  &--visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0, 0px);
-  }
-
-  &--fast {
-    @media screen and (min-width: $screen-lg) {
-      transition-delay: calc(var(--animation-order) * 400ms);
-    }
-  }
-}
-
 section, .section {
   flex: 1;
   display: flex;
