@@ -30,7 +30,6 @@ const About = forwardRef((props, ref) => {
                         <div>Python</div>
                         <div>TypeScript</div>
                         <div>C#</div>
-                        <div>Elasticsearch</div>
                     </div>
                 </div>
                 <div className={'mb-5'}>
