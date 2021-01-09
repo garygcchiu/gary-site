@@ -1,6 +1,6 @@
-require('dotenv').config();
+// require('dotenv').config();
 const withImages = require('next-images');
-const GOOGLE_ANALYTICS_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TRACKING_ID;
+// const GOOGLE_ANALYTICS_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TRACKING_ID;
 
 module.exports = withImages({
     webpack(config, options) {
@@ -29,7 +29,7 @@ module.exports = withImages({
         return config
     },
     env: {
-        GOOGLE_ANALYTICS_TRACKING_ID: GOOGLE_ANALYTICS_TRACKING_ID,
+        // GOOGLE_ANALYTICS_TRACKING_ID: GOOGLE_ANALYTICS_TRACKING_ID,
     },
 });
 
