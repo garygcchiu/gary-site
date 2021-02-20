@@ -28,6 +28,7 @@ const About = forwardRef((props, ref) => {
                         <div>SQL (PostgreSQL, MySQL)</div>
                         <div>Java</div>
                         <div>Python</div>
+                        <div>Ruby</div>
                         <div>TypeScript</div>
                         <div>C#</div>
                     </div>
@@ -36,10 +37,12 @@ const About = forwardRef((props, ref) => {
                     <div>
                         <div className={'about__skills__title'}>Frameworks</div>
                         <div>React</div>
+                        <div>React Native</div>
                         <div>Node.js</div>
                         <div>Express</div>
                         <div>.NET Core</div>
                         <div>Next.js</div>
+                        <div>Ruby on Rails</div>
                         <div>Redux</div>
                         <div>Android</div>
                         <div>Spring Boot</div>
@@ -51,10 +54,16 @@ const About = forwardRef((props, ref) => {
                     <div>
                         <div className={'about__skills__title'}>DevOps</div>
                         <div>Amazon Web Services</div>
+                        <div>
+                            <a href={'https://www.youracclaim.com/badges/84715fed-42b8-4404-b3ef-7731e32c33db/public_url'} target={'_blank'}>
+                                (AWS Certified Developer)
+                            </a>
+                        </div>
                         <div>Docker</div>
-                        <div>Google Cloud Platform</div>
                         <div>Pivotal Cloud Foundry</div>
+                        <div>Travis CI</div>
                         <div>Concourse CI/CD</div>
+                        <div>Jest</div>
                         <div>Mocha, Chai</div>
                     </div>
                 </div>
