@@ -1,0 +1,19 @@
+.portfolio {
+  &__item {
+    margin-bottom: 5rem;
+
+    &__image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 2.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__technologies {
+      color: #afafbf;
+    }
+  }
+}

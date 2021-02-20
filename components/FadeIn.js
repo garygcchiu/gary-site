@@ -1,6 +1,6 @@
 import React from 'react';
-import { keyframes } from "@emotion/core";
-import Reveal from "react-awesome-reveal";
+import { keyframes } from '@emotion/core';
+import Reveal from 'react-awesome-reveal';
 
 const customAnimation = keyframes`
   from {
@@ -13,17 +13,17 @@ const customAnimation = keyframes`
   }
 `;
 
-const FadeIn = ({ children, className = '', fast, cascade = false, delay = 0 }) => {
-    return (
-        <Reveal keyframes={customAnimation}
-                className={className}
-                triggerOnce fraction={0.5}
-                cascade={cascade}
-                delay={delay}
-        >
-            {children}
-        </Reveal>
-    );
-};
+const FadeIn = ({ children, className = '', cascade = false, delay = 0 }) => (
+    <Reveal
+        keyframes={customAnimation}
+        className={className}
+        triggerOnce
+        fraction={0.5}
+        cascade={cascade}
+        delay={delay}
+    >
+        {children}
+    </Reveal>
+);
 
 export default FadeIn;

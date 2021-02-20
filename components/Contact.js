@@ -1,8 +1,7 @@
 import Footer from './Footer';
 import FadeIn from './FadeIn';
 
-const Contact = () => {
-    return <div className={'contact'}>
+const Contact = () => <div className={'contact'}>
         <FadeIn className={'contact__main'}>
             <div  className={'contact__main'}>
                 <span className={'mr-2 contact__text'}>
@@ -17,6 +16,5 @@ const Contact = () => {
             <Footer />
         </div>
     </div>;
-};
 
 export default Contact;

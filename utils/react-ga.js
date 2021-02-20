@@ -1,4 +1,4 @@
-import ReactGA from "react-ga";
+import ReactGA from 'react-ga';
 
 const init = () => {
     ReactGA.initialize(process.env.GOOGLE_ANALYTICS_TRACKING_ID, {
