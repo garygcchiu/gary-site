@@ -1,8 +1,6 @@
-const ImageSection = () => {
-    return <div className={'image-section'}>
+const ImageSection = () => <div className={'image-section'}>
         <div className={'image-section__overlay image-section__overlay--top'}/>
         <div className={'image-section__overlay image-section__overlay--bottom'}/>
-    </div>
-};
+    </div>;
 
 export default ImageSection;

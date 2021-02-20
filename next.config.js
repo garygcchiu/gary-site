@@ -1,6 +1,7 @@
 require('dotenv').config();
 const withImages = require('next-images');
-const GOOGLE_ANALYTICS_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TRACKING_ID;
+
+const { GOOGLE_ANALYTICS_TRACKING_ID } = process.env;
 
 module.exports = withImages({
     webpack(config, options) {
@@ -8,14 +9,14 @@ module.exports = withImages({
             test: /\.(webmanifest)$/i,
             use: [
                 {
-                    loader: "file-loader",
+                    loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
                         publicPath: '/',
                     },
                 },
                 {
-                    loader: "app-manifest-loader"
+                    loader: 'app-manifest-loader'
                 }
             ]
         }, {
@@ -29,7 +30,7 @@ module.exports = withImages({
         return config
     },
     env: {
-        GOOGLE_ANALYTICS_TRACKING_ID: GOOGLE_ANALYTICS_TRACKING_ID,
+        GOOGLE_ANALYTICS_TRACKING_ID,
     },
 });
 
