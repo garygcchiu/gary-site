@@ -21,13 +21,13 @@ const About = forwardRef((props, ref) => (
                     <div>
                         <div className={'about__skills__title'}>Languages</div>
                         <div>JavaScript</div>
+                        <div>TypeScript</div>
                         <div>HTML</div>
                         <div>CSS/Sass</div>
                         <div>SQL (PostgreSQL, MySQL)</div>
                         <div>Java</div>
                         <div>Python</div>
                         <div>Ruby</div>
-                        <div>TypeScript</div>
                         <div>C#</div>
                     </div>
                 </div>
@@ -64,6 +64,7 @@ const About = forwardRef((props, ref) => (
                             </a>
                         </div>
                         <div>Docker</div>
+                        <div>Terraform</div>
                         <div>Pivotal Cloud Foundry</div>
                         <div>Travis CI</div>
                         <div>Concourse CI/CD</div>
