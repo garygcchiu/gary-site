@@ -6,8 +6,11 @@ const About = forwardRef((props, ref) => (
         <FadeIn>
             <h2 className={'about__title'}>Nice to meet you 😄</h2>
             <div className={'about__text pb-5 mb-5'}>
-                I’m currently a Software Developer at Konrad Group, building
-                innovative solutions for industry-leading clients.
+                I’m currently a Software Engineer at{' '}
+                <a href={'https://bolt.com'} target={'_blank'} rel="noreferrer">
+                    Bolt
+                </a>
+                .
                 <br />I am passionate about using technology to improve quality
                 of life — and making it look & feel as good as possible.
             </div>
@@ -20,14 +23,13 @@ const About = forwardRef((props, ref) => (
                 <div className={'mb-5'}>
                     <div>
                         <div className={'about__skills__title'}>Languages</div>
-                        <div>JavaScript</div>
-                        <div>TypeScript</div>
+                        <div>JavaScript (TypeScript)</div>
+                        <div>Go</div>
                         <div>HTML</div>
                         <div>CSS/Sass</div>
                         <div>SQL (PostgreSQL, MySQL)</div>
                         <div>Java</div>
                         <div>Python</div>
-                        <div>Ruby</div>
                         <div>C#</div>
                     </div>
                 </div>
@@ -81,6 +83,21 @@ const About = forwardRef((props, ref) => (
                     <div className={'about__company'}>
                         <div>
                             <a
+                                href={'https://bolt.com'}
+                                target={'_blank'}
+                                rel="noreferrer"
+                            >
+                                <b>Bolt</b>
+                            </a>
+                            <div>Software Engineer</div>
+                        </div>
+                        <div className={'about__company__dates'}>
+                            June 2021 – Present
+                        </div>
+                    </div>
+                    <div className={'about__company'}>
+                        <div>
+                            <a
                                 href={'https://konrad.com'}
                                 target={'_blank'}
                                 rel="noreferrer"
@@ -90,7 +107,7 @@ const About = forwardRef((props, ref) => (
                             <div>Software Developer</div>
                         </div>
                         <div className={'about__company__dates'}>
-                            May 2019 – Present
+                            May 2019 – May 2021
                         </div>
                     </div>
                     <div className={'about__company'}>
