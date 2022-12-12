@@ -4,22 +4,8 @@ const withImages = require('next-images');
 const { GOOGLE_ANALYTICS_TRACKING_ID } = process.env;
 
 module.exports = withImages({
-    webpack(config, options) {
+    webpack(config) {
         config.module.rules.push({
-            test: /\.(webmanifest)$/i,
-            use: [
-                {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        publicPath: '/',
-                    },
-                },
-                {
-                    loader: 'app-manifest-loader'
-                }
-            ]
-        }, {
             test: /\.(pdf)$/i,
             loader: 'file-loader',
             options: {
@@ -27,10 +13,12 @@ module.exports = withImages({
                 publicPath: '/',
             },
         });
-        return config
+        return config;
     },
     env: {
         GOOGLE_ANALYTICS_TRACKING_ID,
     },
+    images: {
+        disableStaticImages: true,
+    },
 });
-

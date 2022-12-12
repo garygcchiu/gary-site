@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const PortfolioItem = ({
     title,
@@ -19,7 +20,7 @@ const PortfolioItem = ({
             <h4 className={'portfolio__item__header'}>{title}</h4>
         )}
         {featured ? (
-            <img
+            <Image
                 src={image}
                 alt={'Portfolio Item'}
                 height={491}
@@ -32,7 +33,7 @@ const PortfolioItem = ({
         )}
         <p>{description}</p>
         <div className={'portfolio__item__technologies'}>
-            > {technologies.join(', ')}
+            {technologies.join(', ')}
         </div>
     </div>
 );
