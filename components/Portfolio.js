@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import FadeIn from './FadeIn';
 import PortfolioItem from './PortfolioItem';
-import mealmatchioImage from '../public/mealmatchio.png';
-// import echoImage from '../public/echo.gif';
+import mealmatchioImage from '../public/images/mealmatchio.png';
 
 const Portfolio = forwardRef((props, ref) => (
     <div className={'about'} ref={ref}>

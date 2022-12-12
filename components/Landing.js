@@ -41,7 +41,7 @@ const Landing = () => {
                     </div>
                     <div className={'landing__title'}>
                         I build web applications & custom software solutions,
-                        currently based in Toronto, Canada. 👨‍💻
+                        currently based in New York City. 👨‍💻
                     </div>
                     <div className={'landing__cta'}>
                         <Socials />

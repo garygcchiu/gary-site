@@ -1,6 +1,6 @@
 import * as ReactGA from '../utils/react-ga';
 import IconLink from './IconLink';
-import resume from '../public/Gary_Chiu_Resume_2021.pdf';
+import resume from '../public/Gary_Chiu_Resume_2022_4.pdf';
 
 const handleResumeDownloaded = () => {
     ReactGA.sendEvent('Link', 'Downloaded Resume');

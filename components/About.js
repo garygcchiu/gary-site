@@ -7,8 +7,28 @@ const About = forwardRef((props, ref) => (
             <h2 className={'about__title'}>Nice to meet you 😄</h2>
             <div className={'about__text pb-5 mb-5'}>
                 I’m currently a Software Engineer at{' '}
-                <a href={'https://bolt.com'} target={'_blank'} rel="noreferrer">
+                <a
+                    href={'https://www.datadoghq.com'}
+                    target={'_blank'}
+                    rel="noreferrer"
+                >
+                    Datadog
+                </a>
+                . Previously I've been a Software Engineer at{' '}
+                <a
+                    href={'https://www.bolt.com'}
+                    target={'_blank'}
+                    rel="noreferrer"
+                >
                     Bolt
+                </a>{' '}
+                and{' '}
+                <a
+                    href={'https://www.konrad.com'}
+                    target={'_blank'}
+                    rel="noreferrer"
+                >
+                    Konrad Group
                 </a>
                 .
                 <br />I am passionate about using technology to improve quality
@@ -83,6 +103,21 @@ const About = forwardRef((props, ref) => (
                     <div className={'about__company'}>
                         <div>
                             <a
+                                href={'https://dataadoghq.com'}
+                                target={'_blank'}
+                                rel="noreferrer"
+                            >
+                                <b>Datadog</b>
+                            </a>
+                            <div>Software Engineer</div>
+                        </div>
+                        <div className={'about__company__dates'}>
+                            January 2022 – Present
+                        </div>
+                    </div>
+                    <div className={'about__company'}>
+                        <div>
+                            <a
                                 href={'https://bolt.com'}
                                 target={'_blank'}
                                 rel="noreferrer"
@@ -92,7 +127,7 @@ const About = forwardRef((props, ref) => (
                             <div>Software Engineer</div>
                         </div>
                         <div className={'about__company__dates'}>
-                            June 2021 – Present
+                            June 2021 – December 2022
                         </div>
                     </div>
                     <div className={'about__company'}>
