@@ -5,7 +5,6 @@ import mailgo from 'mailgo';
 import withDarkMode from 'next-dark-mode';
 import smoothscroll from 'smoothscroll-polyfill';
 import appleTouchFavicon from '../public/images/apple-touch-icon.png';
-import manifest from '../public/manifest.json';
 import * as ReactGA from '../utils/react-ga';
 
 const MyApp = ({ Component, pageProps }) => {
@@ -24,8 +23,6 @@ const MyApp = ({ Component, pageProps }) => {
                     sizes="180x180"
                     href={appleTouchFavicon}
                 />
-                <link rel="manifest" href={manifest} />
-
                 <title>Gary Chiu</title>
                 <meta
                     name="description"
