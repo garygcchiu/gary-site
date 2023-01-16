@@ -51,10 +51,6 @@ export default function Index() {
                     </section>
                     <ImageSection />
                     <section>
-                        <Portfolio />
-                    </section>
-                    <ImageSection />
-                    <section>
                         <Contact />
                     </section>
                 </main>
