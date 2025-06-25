@@ -12,14 +12,14 @@ const handleSocialLinkClicked = (website) => {
 
 const Socials = () => (
     <div className={'landing__socials'}>
-        <IconLink
+        {/* <IconLink
             href={resume}
             imgAlt={'Resume Download'}
             className={'socials__icon resume'}
             download={false}
             onClick={handleResumeDownloaded}
-        />
-        <span className={'socials__separator'}>|</span>
+        /> */}
+        {/* <span className={'socials__separator'}>|</span> */}
         <IconLink
             href={'https://www.github.com/garygcchiu'}
             imgAlt={'GitHub Profile'}
