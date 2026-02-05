@@ -1,24 +1,20 @@
 require('dotenv').config();
-const withImages = require('next-images');
 
 const { GOOGLE_ANALYTICS_TRACKING_ID } = process.env;
 
-module.exports = withImages({
+module.exports = {
     webpack(config) {
         config.module.rules.push({
             test: /\.(pdf)$/i,
-            loader: 'file-loader',
-            options: {
-                name: '[name].[ext]',
-                publicPath: '/',
+            type: 'asset/resource',
+            generator: {
+                filename: '[name][ext]',
             },
         });
         return config;
     },
+    turbopack: {},
     env: {
         GOOGLE_ANALYTICS_TRACKING_ID,
     },
-    images: {
-        disableStaticImages: true,
-    },
-});
+};
